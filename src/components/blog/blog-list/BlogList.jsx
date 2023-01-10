@@ -16,7 +16,6 @@ const BlogList = (props) => {
       const data = await resp.json();
       setProducts(data);
     }
-    console.log("pol");
     fetchProducts();
   }, []);
 
