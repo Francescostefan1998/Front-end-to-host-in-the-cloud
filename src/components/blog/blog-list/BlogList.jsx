@@ -12,9 +12,7 @@ const BlogList = (props) => {
     console.log("useeffect triggered");
     async function fetchProducts() {
       const apiUrl = process.env.REACT_APP_BE;
-      const resp = await fetch(
-        "https://remake-benchmark-exam-production.up.railway.app/products"
-      );
+      const resp = await fetch(`${apiUrl}/products`);
       const data = await resp.json();
       setProducts(data);
     }
